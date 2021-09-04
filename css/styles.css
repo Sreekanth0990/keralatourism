@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
 
 body {
     font-family: 'Open Sans', Arial, sans-serif;
@@ -118,6 +119,7 @@ p { line-height: 1.9; }
 .tm-row { 
     display: flex;
     
+    
  }
 
 .tm-col-left {
@@ -224,7 +226,7 @@ textarea {
 
 .mb-85 { margin-bottom: 85px; }
 
-.tm-contact-main { max-width: 690px; }
+.tm-contact-main { max-width: 500px; }
 
 .tm-contact {
     max-width: 420px;
@@ -261,7 +263,7 @@ textarea {
     .marmain{
 
       margin-left: 200px;
-      margin-top: 200px;
+      margin-top: 100px;
     }
     
     .tm-col-footer { padding-left: 0; }
@@ -561,7 +563,7 @@ textarea {
 
 
   .footer-dark {
-    padding:20px 0;
+    padding:10px 0;
     color:#f0f9ff;
     background-color:#282d32;
   }
@@ -657,4 +659,137 @@ textarea {
   }
   
   
-  
+  /* ********************************form************************************** */
+  :root{
+    --success-color:#2ecc71;
+    --error-color: #e74c3c;
+}
+
+*{
+    box-sizing: border-box;
+}
+  .containerform{
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0, 0.3);
+    width: 400px;
+    height : auto;
+    align-items: center;
+
+}
+h2{
+    text-align: center;
+    margin: 0 0 20px;
+}
+.form{
+
+    padding: 30px 40px;
+
+}
+.form-control{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* padding-bottom: 20px; */
+    position: relative;
+    
+}
+.form-control label{
+
+   color: rgb(12, 11, 11);
+   display: block;
+   margin-bottom: 5px;
+   margin-top: 5px;
+}
+.form-control input{
+    border: 2px solid  #f0f0f0;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+
+}
+.form-control input:focus{
+    outline: 0;
+    border-color: #777;
+}
+.form-control.success input{
+
+    border-color:var(--success-color);
+
+}
+.form-control.error input{
+    border-color:var(--error-color);
+}
+
+.form-control small{
+  color: #f0f0f0;
+    /* color: var(--error-color); */
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+   
+}
+
+.form-control.error small{
+
+    visibility: visible;
+}
+
+.form button{
+    cursor: pointer;
+    background-color: #3498db;
+    border: 2px sold #3498db;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+input:hover, input:focus {
+  outline: 0;
+  transition: all .5s linear;
+  box-shadow: inset 0px 0px 10px #ccc;
+}
+
+meter {
+    /* Reset the default appearance */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+            
+  margin: 0 auto 1em;
+  width: 100%;
+  height: .5em;
+    
+    /* Applicable only to Firefox */
+  background: none;
+  background-color: rgba(0,0,0,0.1);
+}
+
+meter::-webkit-meter-bar {
+  background: none;
+  background-color: rgba(0,0,0,0.1);
+}
+
+meter[value="1"]::-webkit-meter-optimum-value { background: red; }
+meter[value="2"]::-webkit-meter-optimum-value { background: yellow; }
+meter[value="3"]::-webkit-meter-optimum-value { background: orange; }
+meter[value="4"]::-webkit-meter-optimum-value { background: green; }
+
+meter[value="1"]::-moz-meter-bar { background: red; }
+meter[value="2"]::-moz-meter-bar { background: yellow; }
+meter[value="3"]::-moz-meter-bar { background: orange; }
+meter[value="4"]::-moz-meter-bar { background: green; }
+
+.feedback {
+  color: #9ab;
+  font-size: 90%;
+  padding: 0 .25em;
+  font-family: Courgette, cursive;
+  margin-top: 1em;
+}
